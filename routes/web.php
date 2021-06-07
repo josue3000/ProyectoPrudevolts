@@ -34,7 +34,9 @@ Route::get('/', function () {
  Auth::routes();
 
 
-Route::get('reporte/{id}','VentaServicioController@imprimir') -> name('venta.pdf');
+Route::get('inicio.show','InicioController@ReportePdf') -> name('venta.pdf');
+
+
 Route::get('venta.index', 'VentaServicioController@exportExcel') -> name('venta.excel');
 Route::get('cliente.index', 'ClienteController@exportExcel') -> name('cliente.excel');
 Route::get('equipo.index', 'EquipoController@exportExcel') -> name('equipo.excel');

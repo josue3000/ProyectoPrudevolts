@@ -260,7 +260,7 @@
 
 
 
-    <a href="https://web.whatsapp.com/" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+    <a href="https://web.whatsapp.com/" class="whatsapp ocultar-al-imprimir" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon ocultar-al-imprimir"></i></a>
 
     
     <!-- jQuery -->

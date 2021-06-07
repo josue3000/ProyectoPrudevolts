@@ -13,7 +13,7 @@
             <div class="col-xs-12 invoice-header">
               <h1>
                               <i class="fa fa-globe"></i> 
-                              <small class="pull-right">Date: {{$venta->fecha_actual}}</small>
+                              <small class="pull-right">Fecha: {{$venta->fecha_actual}}</small>
                           </h1>
             </div>
           </div>
@@ -41,7 +41,7 @@
                               <br>{{$venta->tipo_equipo}} : {{$venta->serial}} : {{$venta->marca}}
                               <br><strong>Diagnóstico Preliminar:</strong>
                               <br>{{$venta->diagnostico}}
-                              <br><strong>Diagnóstico Técnico]:</strong>
+                              <br><strong>Diagnóstico Técnico:</strong>
                               <br>{{$venta->diagnosticoTecnico}}
                               <br><strong>Notas y observaciones:</strong>
                               <br>{{$venta->notas}}
@@ -263,7 +263,7 @@
                         <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                             <div class="form-group">
                                 {{-- <a href="{{ route('venta.pdf',$venta->id_venta) }}"><button type="button" class="btn btn-success"  ><i class="fa fa-print"></i>  Imprimir</button></a> --}}
-                                <button type="button" class="btn btn-success" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
+                                <button type="button" class="btn btn-success ocultar-al-imprimir" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
                             </div>
                         </div>
 

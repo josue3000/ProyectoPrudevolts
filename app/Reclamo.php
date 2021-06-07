@@ -13,7 +13,7 @@ class Reclamo extends Model
     protected $filleable =[
         'cliente',
         'id_servicio',
-        'descripcion',
+        'descripcion'=> 'required',
         'fecha_creacion',
         'fecha_actualizacion',
         'estado',

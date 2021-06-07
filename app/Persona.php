@@ -12,11 +12,11 @@ class Persona extends Model
 
     protected $filleable =[
         'tipo_persona',
-        'nombre',
-        'tipo_documento',
+        'nombre'=> 'required',
+        'tipo_documento' => 'required',
         'num_documento',
-        'direccion',
-        'telefono',
+        'direccion'=> 'required',
+        'telefono'=>'required',
         'email',
         'coordenadas',
         'fecha_hora'

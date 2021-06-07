@@ -18,52 +18,52 @@
        
 
          <div class="row">
-                      
+          
+          <h3>Estado de Pago de los servicios</h3>
+          
           @can('Inicio.index')
-          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <div class="tile-stats">
               <div class="icon"><i class="fa fa-check-square-o"></i>
               </div>
               <div class="count">{{$servicios ->servicios}}</div>
-              {{-- <div class="count">176</div> --}}
-              <a href="{{url('ventas/venta')}}"><h3>Servicios Registrados</h3></a>
-              {{-- <p>Lorem ipsum psdea itgum rixt.</p> --}}
+              {{-- <a  href="{{url('ventas/venta')}}"><h4>Servicios Registrados</h4></a> --}}
+              <center><h4>Servicios Registrados</h4></center>
             </div>
           </div>
           @endcan
 
           @can('Inicio.index')
-            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-check"></i>
                 </div>
                 <div class="count">{{$cancelados ->servicios}}</div>
-                {{-- <div class="count">176</div> --}}
-                <a href="{{url('ventas/venta')}}"><h3>Servicios Pagados</h3></a>
-                {{-- <p>Lorem ipsum psdea itgum rixt.</p> --}}
+                {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4>Servicios Pagados</h4></a> --}}
+                <center><h4>Servicios Pagados</h4></center>
               </div>
             </div>
             @endcan
             
             @can('Inicio.index')
-            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-exclamation-triangle" ></i>
                 </div>
                 <div class="count">{{ $deudas ->servicios}}</div>
-                {{-- <div class="count">176</div> --}}
-                <a href="{{url('ventas/venta')}}"><h3>Servicios a deuda </h3></a>
-                {{-- <p>Lorem ipsum psdea itgum rixt.</p> --}}
+                {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4>Servicios a deuda </h4></a> --}}
+                <center><h4>Servicios a deuda</h4></center>
               </div>
             </div>
             @endcan
             @can('Inicio.index')
-            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-6">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-sign-out"></i>
                 </div>
                 <div class="count">{{$serviciosPresupuestados->servicios}}</div>
-                <a href="{{url('ventas/venta')}}"><h3>Servicios Presupuestados </h3></a>
+                {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4>Servicios Presupuestados </h4></a> --}}
+                <center><h4>Servicios Presupuestados</h4></center>
               </div>
             </div>
             @endcan
@@ -75,52 +75,56 @@
          @endcan
 
          @can('Inicio.edit') 
-         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12" >
+         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6" >
            <div class="tile-stats" style="border-color: #1ABB9C">
              <div class="icon"><i class="fa fa-bell-o" style="color: #d9e94cf6"></i>
              </div>
              <div class="count" style="color:#d9e94cf6">{{$recibido->recibido}}</div>
-             <a href="{{url('ventas/venta')}}"><h3 style="color: #d9e94cf6">Recibidos</h3></a>
+             {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h3 style="color: #d9e94cf6">Recibidos</h3></a> --}}
+             <center><h4 style="color: #d9e94cf6">Recibidos</h4></center>
            </div>
          </div>
          @endcan
          @can('Inicio.edit')
-         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12" >
+         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6" >
            <div class="tile-stats" style="border-color: #1ABB9C">
              <div class="icon"><i class="fa fa-sign-in" style="color:#747574 "></i>
              </div>
              <div class="count" style="color:#747574">{{$presupuesto->presupuesto}}</div>
-             <h3 style="color: #747574">Presupuestos</h3></a>
+             <center><h4 style="color: #747574">Presupuestos</h4></center>
            </div>
          </div>
          @endcan
          @can('Inicio.edit')  
-         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6" >
            <div class="tile-stats" style="border-color: #1ABB9C">
              <div class="icon"><i class="fa fa-gears" style="color: #ff9900"></i>
              </div>
              <div class="count" style="color:#ff9900">{{$pendiente->pendiente}}</div>
-             <a href="{{url('ventas/venta')}}"><h3 style="color: #ff9900">En Reparación</h3></a>
+             {{-- <a href="{{url('ventas/venta')}}"><h4 style="color: #ff9900">En Reparación</h4></a> --}}
+             <center><h4 style="color: #ff9900">En Reparación</h4></center>
            </div>
          </div>
          @endcan
          @can('Inicio.edit')  
-         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-6" >
            <div class="tile-stats" style="border-color: #1ABB9C">
              <div class="icon"><i class="fa fa-thumbs-o-up" style="color: #0004ff"></i>
              </div>
              <div class="count" style="color:#0004ff">{{$listoparaentregar->listoparaentregar}}</div>
-             <a href="{{url('ventas/venta')}}"><h3 style="color: #0004ff">Listos para Entregar</h3></a>
+             {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4 style="color: #0004ff">Listos para Entregar</h4></a> --}}
+             <center><h4 style="color: #0004ff">Listos para Entregar</h4></center>
            </div>
          </div>
          @endcan
          @can('Inicio.edit') 
-         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12" >
+         <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6" >
            <div class="tile-stats" style="border-color: #1ABB9C">
              <div class="icon"><i class="fa fa-check" style="color: #2bff00"></i>
              </div>
              <div class="count" style="color:#2bff00">{{$entregado->entregado}}</div>
-             <a href="{{url('ventas/venta')}}"><h3 style="color: #2bff00">Entregados</h3></a>
+             {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4 style="color: #2bff00">Entregados</h4></a> --}}
+             <center><h4 style="color: #2bff00">Entregados</h4></center>
            </div>
          </div>
          @endcan
@@ -129,22 +133,24 @@
         
            
             @can('Inicio.edit')  
-            <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12" >
+            <div class="animated flipInY col-lg-2 col-md-2 col-sm-6 col-xs-6" >
               <div class="tile-stats" style="border-color: #1ABB9C">
                 <div class="icon"><i class="fa fa-exclamation" style="color: #ff002b"></i>
                 </div>
                 <div class="count" style="color:#ff002b">{{$reclamo->reclamo}}</div>
-                <a href="{{url('ventas/venta')}}"><h3 style="color: #ff002b">Reclamos</h3></a>
+                {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4 style="color: #ff002b">Reclamos</h4></a> --}}
+                <center><h4 style="color: #ff002b">Reclamos</h4></center>
               </div>
             </div>
             @endcan
             @can('Inicio.edit') 
-            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-6" >
               <div class="tile-stats" style="border-color: #1ABB9C">
                 <div class="icon"><i class="fa fa-exclamation" style="color: #c9d33f"></i>
                 </div>
                 <div class="count" style="color:#c9d33f">{{$entregado2->entregado2}}</div>
-                <a href="{{url('ventas/venta')}}"><h3 style="color: #c9d33f">Reclamos Atendidos</h3></a>
+                {{-- <a class="ocultar-al-imprimir" href="{{url('ventas/venta')}}"><h4 style="color: #c9d33f">Reclamos Atendidos</h4></a> --}}
+                <center><h4 style="color: #c9d33f">Reclamos Atendidos</h4></center>
               </div>
             </div>
             @endcan
@@ -185,13 +191,13 @@
 <h3> Cantidad de servicios asignados a Cada Técnico</h3>
     <div class="col-md-12 col-sm-12 col-xs-12">
        <div class="x_panel">
-        <div class="col-md-3 col-sm-3 col-xs-3"> <h4 style="color: black"> Tecnico: </h4></div>
-        <div class="col-md-1 col-sm-1 col-xs-1"> <h4 style="color: black"> Servicios: </h4></div>
-        <div class="col-md-8 col-sm-8 col-xs-8"> <h4 style="color: black"> Porcentaje %: </h4></div>
+        <div class="col-md-2 col-sm-2 col-xs-2"> <h4 style="color: black"> Tecnico: </h4></div>
+        <div class="col-md-2 col-sm-2 col-xs-3"> <h4 style="color: black"> Servicios: </h4></div>
+        <div class="col-md-8 col-sm-7 col-xs-6"> <h4 style="color: black"> Porcentaje %: </h4></div>
         @foreach ($numero as $num)
-          <div class="col-md-3 col-sm-3 col-xs-3"> <h4>{{ $num->name}}</h4> </div>
-          <div class="col-md-1 col-sm-1 col-xs-1"> <h4>{{ $num->id}}</h4> </div>
-          <div class="col-md-8 col-sm-8 col-xs-8">
+          <div class="col-md-3 col-sm-3 col-xs-3"> <h6>{{ $num->name}}</h6> </div>
+          <div class="col-md-1 col-sm-3 col-xs-3"> <h6>{{ $num->id}}</h6> </div>
+          <div class="col-md-7 col-sm-6 col-xs-6">
              <div class="progress">
              <div class="progress-bar-info" role="progressbar" style="width: {{round($num->id * 100 / $total,2)}}%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"> <center><label style="color: black">{{round($num->id * 100 / $total,2)}} %</label></center></div>
              </div>        
@@ -229,22 +235,8 @@
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2> <small>Totales de ganancias</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h3>Totales de ganancias </h3>
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -255,24 +247,10 @@
 
 
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
+                <div class="x_panel"> 
                   <div class="x_title">
-                    <h2> <small>Totales en servicios y repuestos</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h3>Totales en servicios y repuestos  </h3>
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -664,8 +642,12 @@
           <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
             <div class="form-group">
                 {{-- <a href="{{ route('venta.pdf',$venta->id_venta) }}"><button type="button" class="btn btn-success"  ><i class="fa fa-print"></i>  Imprimir</button></a> --}}
-                <button type="button" class="btn btn-success" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
+                <button type="button" class="btn btn-success ocultar-al-imprimir" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
             </div>
+            {{-- <div class="form-group"> --}}
+              {{-- <a href="{{ route('venta.pdf') }}"><button type="button" class="btn btn-primary ocultar-al-imprimir"  ><i class="fa fa-print"></i>  Imprimir</button></a> --}}
+              {{-- <button type="button" class="btn btn-primary"  ><i class="fa fa-print"></i> Reporte PDF</button> --}}
+            {{-- </div> --}}
         </div>
 
         </div>

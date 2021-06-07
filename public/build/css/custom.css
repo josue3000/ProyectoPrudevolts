@@ -4301,3 +4301,13 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
   .whatsapp-icon {
     margin-top:13px;
   }
+
+  
+/* Cuando el dispositivo de salida sea una impresora */
+@media print {
+
+    /* Utilizar una regla parecida a ésta: */
+    .ocultar-al-imprimir {
+      display: none;
+    }
+  }

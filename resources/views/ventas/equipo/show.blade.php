@@ -45,7 +45,7 @@
                     <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                         <div class="form-group">
                             {{-- <a href="{{ route('venta.pdf',$venta->id_venta) }}"><button type="button" class="btn btn-success"  ><i class="fa fa-print"></i>  Imprimir</button></a> --}}
-                            <button type="button" class="btn btn-success" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
+                            <button type="button" class="btn btn-success ocultar-al-imprimir" onclick="window.print();" ><i class="fa fa-print"></i>  Imprimir</button>
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,7 @@
                     @endif
                     {{-- <p>Importar registros desde Excel</p> --}}
                     <h5>Importar registros desde Excel</h5>
-                    <div class="col-md-6 col-sm-6 col-xs-6"> <input type="file" name="file"></div>
+                    <div class="col-md-6 col-sm-6 col-xs-6"> <input type="file" required name="file"></div>
                     <div class="col-md-6 col-sm-6 col-xs-6"> <button class="btn btn-info">Importar Clientes</button></div>
                 </form>
             </div>
